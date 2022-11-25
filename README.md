@@ -1,5 +1,6 @@
 ### Archive Notice
-This plugin is relatively stable and feature-complete, but I won't be working on it or accepting pull requests going forward. If anyone is interested in taking over as maintainer, feel free to email me. I'm also happy to link to popular forks that have spun off. Thanks.
+
+This is a fork of original new_version lib.
 
 # New Version Plugin 🎉
 
@@ -15,7 +16,19 @@ See more at the [Dart Packages page.](https://pub.dartlang.org/packages/new_vers
 Add new_version as [a dependency in your `pubspec.yaml` file.](https://flutter.io/using-packages/)
 ```
 dependencies:
-  new_version: ^0.3.0
+  new_version:
+    url: https://github.com/eduardoazvd17/new_version.git
+    ref: master
+```
+
+For android devices you need to configure permissions adding the following lines to AndroidManifest.xml, inside the manifest tag and on top of application tag:
+```
+<queries>
+    <intent>
+      <action android:name="android.intent.action.VIEW" />
+      <data android:scheme="https" />
+    </intent>
+</queries>
 ```
 
 ## Usage
