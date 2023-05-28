@@ -289,7 +289,10 @@ class NewVersion {
     debugPrint(appStoreLink);
     final Uri uri = Uri.parse(appStoreLink);
     if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
+      await launchUrl(
+        uri,
+        mode: LaunchMode.externalNonBrowserApplication,
+      );
     } else {
       throw 'Could not launch appStoreLink';
     }
