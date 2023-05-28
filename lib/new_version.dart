@@ -122,11 +122,9 @@ class NewVersion {
   /// JSON document.
   Future<VersionStatus?> _getiOSStoreVersion(PackageInfo packageInfo) async {
     final id = iOSId ?? packageInfo.packageName;
-    final parameters = {"bundleId": "$id"};
-    if (iOSAppStoreCountry != null) {
-      parameters.addAll({"country": iOSAppStoreCountry!});
-    }
-    var uri = Uri.https("itunes.apple.com", "/lookup", parameters);
+    final countryCode = iOSAppStoreCountry ?? 'us';
+    final parameters = {"id": id};
+    var uri = Uri.https("itunes.apple.com", "/$countryCode/lookup", parameters);
     final response = await http.get(uri);
     if (response.statusCode != 200) {
       debugPrint('Failed to query iOS App Store');
