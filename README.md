@@ -1,6 +1,7 @@
 ### Archive Notice
 
-This is a fork of original new_version lib with android device update checker fixed !!!
+This is a fork of fork of the original new_version lib with android device update checker fixed !!!
+forked from eduardoazvd17/new_version
 
 # New Version Plugin 🎉
 
@@ -17,7 +18,7 @@ Add new_version as [a dependency in your `pubspec.yaml` file.](https://flutter.i
 ```
 dependencies:
   new_version:
-    url: https://github.com/eduardoazvd17/new_version.git
+    url: https://github.com/jcchuks/new_version.git
     ref: master
 ```
 
